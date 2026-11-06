@@ -1,0 +1,25 @@
+{
+  "name": "wedding-world",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:all": "node scripts/dev.mjs",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "tsc --noEmit",
+    "assets:guest": "node scripts/generate_guest.mjs"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "5.2.8",
+    "@fontsource/lora": "5.2.8",
+    "jspdf": "4.2.1",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.180.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.7"
+  }
+}

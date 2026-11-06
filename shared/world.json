@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "extent": 540,
+  "speed": 4.5,
+  "plazaRadius": 34,
+  "globalColliders": [
+    {"center": [0, 0], "radius": 5.1},
+    {"center": [-21.05, 4.07], "radius": 1.7},
+    {"center": [-22.44, 5.28], "radius": 1.1},
+    {"center": [-19.28, 3.56], "radius": 1.1},
+    {"center": [8.63, 8.63], "radius": 1.1},
+    {"center": [0, -12.2], "radius": 1.1},
+    {"center": [-8.63, 8.63], "radius": 1.1}
+  ],
+  "registrar": [-20, 6],
+  "districtBounds": [-38, 38, -45, 45],
+  "gate": [0, 40],
+  "arrival": [0, 29],
+  "readyPoint": [0, 24],
+  "reception": [26, -31],
+  "viewing": [-6, 15],
+  "audienceBounds": [-14, 14, 7, 23],
+  "stagePositions": [[-2, -17], [2, -17]],
+  "areas": [
+    {"id": "stage", "bounds": [-10, 10, -29, -7], "permission": "ritual"},
+    {"id": "priority-a", "bounds": [-14, -1.1, -5, 6], "permission": "group"},
+    {"id": "priority-b", "bounds": [1.1, 14, -5, 6], "permission": "group"},
+    {"id": "aisle", "bounds": [-1.1, 1.1, -7, 6], "permission": "ritual"},
+    {"id": "procession", "bounds": [-2.6, 2.6, 6, 22], "permission": "ritual"},
+    {"id": "prep-a", "bounds": [-26, -14, 14, 25], "permission": "preparation"},
+    {"id": "prep-b", "bounds": [14, 26, 14, 25], "permission": "preparation"}
+  ],
+  "colliders": [
+    {"bounds": [-11, 11, -31, -30], "height": 4, "material": "backdrop"},
+    {"bounds": [-4.0, 4.0, -27.2, -24.6], "height": 2.0, "material": "altar"},
+    {"bounds": [-12.5, -4.5, 35.4, 36.6], "height": 4.5, "material": "wall"},
+    {"bounds": [4.5, 12.5, 35.4, 36.6], "height": 4.5, "material": "wall"},
+    {"bounds": [23.5, 28.5, -35.2, -33.6], "height": 2.0, "material": "table"},
+    {"bounds": [-26.5, -26, 13.5, 25.5], "height": 3.6, "material": "wall"},
+    {"bounds": [-26.5, -13.5, 25, 25.5], "height": 3.6, "material": "wall"},
+    {"bounds": [-14, -13.5, 13.5, 25.5], "height": 3.6, "material": "wall"},
+    {"bounds": [13.5, 14, 13.5, 25.5], "height": 3.6, "material": "wall"},
+    {"bounds": [13.5, 26.5, 25, 25.5], "height": 3.6, "material": "wall"},
+    {"bounds": [26, 26.5, 13.5, 25.5], "height": 3.6, "material": "wall"}
+  ],
+  "districts": [
+    {
+      "id": "vietnam", "name": "Vietnam", "nativeName": "Việt Nam", "symbol": "VN",
+      "center": [-158, 0], "rotation": 1.57079632679,
+      "venue": "Riverside courtyard", "stage": "Lotus Court · Stage A",
+      "color": "#ad5558", "roof": "#8f4d50", "floor": "#c67d63", "flower": "#edbdaf",
+      "inspiration": "Kinh Vietnamese family wedding, with selected northern courtyard references",
+      "description": "Red silk, a quiet river, and a courtyard full of good wishes.",
+      "layoutTitle": "Bố cục Nội Công Ngoại Quốc · Sân Đình & Thủy Đình Hồ Sen",
+      "layoutSummary": "Cổng Tam Quan trầu cau → Sân gạch Bát Tràng & Tả/Hữu Vu trưng tráp → Bàn trà hai họ → Nhà Đại Bái & Bàn thờ Gia Tiên → Tiệc bàn tròn & Thủy Đình hồ sen.",
+      "photoPoint": [-26, -31],
+      "cinematicViews": [[24, 9, 8, 0, 2.2, -19], [-25, 7, -8, 0, 2.5, -21], [24, 12, -34, -4, 2.0, -22]],
+      "spatialZones": [
+        {"id": "gate", "name": "Cổng Tam Quan & Trầu Cau", "role": "Ba lối cổng vòm gạch & cổng lá dừa Song Hỷ", "point": [0, 29], "public": true},
+        {"id": "prep", "name": "Nhà Tả Vu & Hữu Vu", "role": "Hai gian nhà gỗ lim chuẩn bị tráp lễ hai họ", "point": [0, 24], "public": true},
+        {"id": "viewing", "name": "Sân Gạch & Bàn Trà Hai Họ", "role": "Bàn trà gia tộc hai bên & hành lang khách xem lễ", "point": [-6, 15], "public": true},
+        {"id": "reception", "name": "Vườn Tiệc Bàn Tròn Đỏ Vàng", "role": "Bàn tiệc tròn truyền thống dưới giàn đèn lồng", "point": [26, -31], "public": true},
+        {"id": "photo", "name": "Thủy Đình & Cầu Gỗ Hồ Sen", "role": "Lầu ngắm cảnh trên hồ sen hồng & khung ảnh áo dài", "point": [-26, -31], "public": true}
+      ],
+      "attire": ["Áo dài in lacquer red", "Áo dài in ivory", "Áo dài in midnight blue"],
+      "activity": "Share a symbolic tea toast",
+      "program": [
+        {"id": "procession", "title": "The family procession", "duration": 60, "action": "Join the procession", "required": false, "dialogue": "Welcome to Lotus Court. We gather with family and friends for a symbolic celebration."},
+        {"id": "gifts", "title": "Betrothal gifts", "duration": 120, "action": "Present a gift tray", "required": true, "calledRoles": ["brother", "sister", "sibling", "friend"], "dialogue": "Lacquered trays recall gifts of betel, areca, tea, and fruit. Offer a tray as a gesture of care."},
+        {"id": "respect", "title": "Gratitude to family", "duration": 120, "action": "Offer a respectful bow", "required": true, "calledRoles": ["father", "mother"], "dialogue": "A quiet bow expresses gratitude to ancestors and to the people who have cared for us."},
+        {"id": "commitment", "title": "A promise together", "duration": 60, "action": "Make my commitment", "required": true, "dialogue": "Each of you may now choose to make your own commitment to this shared moment."},
+        {"id": "congratulations", "title": "Good wishes & group photograph", "duration": 120, "action": "Send good wishes", "required": false, "dialogue": "Chúc mừng! Join the scheduled photograph, then follow the veranda to the waterside garden."}
+      ]
+    },
+    {
+      "id": "japan", "name": "Japan", "nativeName": "日本", "symbol": "JP",
+      "center": [-104, -151], "rotation": 0.602287346,
+      "venue": "Camellia garden", "stage": "Timber Pavilion · Stage A",
+      "color": "#b1676c", "roof": "#48545b", "floor": "#e7e1d0", "flower": "#edb9ca",
+      "inspiration": "Selected Shinto-style wedding inspiration; symbolic and nonreligious in this game",
+      "description": "A winding garden walk, timber verandas, and a promise in the stillness.",
+      "layoutTitle": "Bố cục Kaiyū-shiki & Karesansui · Vườn Thiền & Điện Gỗ Hinoki",
+      "layoutSummary": "Cổng Myojin Torii & Trạm nước Temizuya → Vườn sỏi trắng Karesansui & Hành lang gỗ Watari-roka → Lối đá Sandō & Hiên Engawa → Đài lễ Haiden → Hiên trà Marumado & Cầu đỏ Taiko-bashi.",
+      "photoPoint": [-26, -31],
+      "cinematicViews": [[25, 8, 11, 0, 2.2, -18], [-26, 6.5, -4, 0, 2.4, -20], [-24, 11, -34, 4, 2.0, -21]],
+      "spatialZones": [
+        {"id": "gate", "name": "Cổng Torii & Trạm Temizuya", "role": "Cổng gỗ đỏ son, đèn đá Kasuga & bồn nước thanh tẩy", "point": [0, 29], "public": true},
+        {"id": "prep", "name": "Trà Thất Hikaeshitsu & Hành Lang Gỗ", "role": "Nhà vách giấy Shoji nối bằng hành lang gỗ có mái", "point": [0, 24], "public": true},
+        {"id": "viewing", "name": "Lối Đá Sandō & Hiên Gỗ Engawa", "role": "Vườn sỏi cào sóng, ghế nỉ đỏ Mōsen & hiên ngắm lễ", "point": [-6, 15], "public": true},
+        {"id": "reception", "name": "Hiên Trà Marumado & Hoa Trà Ikebana", "role": "Ô cửa tròn trăng rằm, dù đỏ Bangasa & nghệ thuật cắm hoa", "point": [26, -31], "public": true},
+        {"id": "photo", "name": "Cầu Vòm Đỏ Taiko-bashi & Hồ Cá Koi", "role": "Cầu gỗ sơn đỏ bắc qua hồ Koi dưới tán anh đào", "point": [-26, -31], "public": true}
+      ],
+      "attire": ["Shiromuku-inspired ivory", "Montsuki-inspired charcoal", "Iro-uchikake-inspired rose"],
+      "activity": "Arrange a camellia at the photo veranda",
+      "program": [
+        {"id": "procession", "title": "A garden procession", "duration": 60, "action": "Join the procession", "required": false, "dialogue": "Walk gently through the garden. This is a symbolic interpretation of a selected Shinto-style wedding."},
+        {"id": "purification", "title": "A moment of stillness", "duration": 90, "action": "Pause in reflection", "required": true, "dialogue": "A quiet pause stands in for purification. No religious rite is performed here."},
+        {"id": "cups", "title": "San-san-kudo-inspired cups", "duration": 90, "action": "Lift a symbolic cup", "required": true, "dialogue": "Three small cups recall san-san-kudo, an exchange associated with connection and a shared life."},
+        {"id": "commitment", "title": "A shared promise", "duration": 60, "action": "Make my commitment", "required": true, "dialogue": "Each participant may freely affirm a commitment to the other."},
+        {"id": "congratulations", "title": "Closing walk & photograph", "duration": 120, "action": "Offer congratulations", "required": false, "dialogue": "The social veranda is open. Gather for a photograph beyond the ceremonial entrance."}
+      ]
+    },
+    {
+      "id": "korea", "name": "South Korea", "nativeName": "대한민국", "symbol": "KR",
+      "center": [104, -151], "rotation": -0.602287346,
+      "venue": "Peony courtyard", "stage": "Hanok Court · Stage A",
+      "color": "#5b8081", "roof": "#425660", "floor": "#dfccae", "flower": "#e5acbb",
+      "inspiration": "Selected Honrye references: Jeonallye, Gyobaerye, and Hapgeullye",
+      "description": "Tiled hanok wings, peony gardens, and a graceful exchange of bows.",
+      "layoutTitle": "Bố cục Lưỡng Viện Hanok · Sân Ngoài, Tường Hoa Kkotdam & Sân Trong",
+      "layoutSummary": "Cổng cao thấp Soseul-daemun → Sân ngoài Bakkat-madang & Dãy Haengrangchae → Tường hoa Kkotdam → Sân trong An-madang, Sạp Pyong-sang & Đài lễ Daeryecheong → Lầu Pyebaek & Vườn bậc thang Hwagye.",
+      "photoPoint": [-26, -31],
+      "cinematicViews": [[24, 8.5, 9, 0, 2.3, -19], [-25, 7, -6, 0, 2.5, -21], [25, 11, -34, 0, 2.1, -22]],
+      "spatialZones": [
+        {"id": "gate", "name": "Cổng Soseul-daemun & Tường Damjang", "role": "Cổng tam môn mái nâng cao vẽ Dancheong & đèn lụa xanh-đỏ", "point": [0, 29], "public": true},
+        {"id": "prep", "name": "Sân Ngoài Bakkat-madang & Dãy Hanok", "role": "Sân tập kết ngoài, hiên gỗ Maru & khu chum Jangdokdae", "point": [0, 24], "public": true},
+        {"id": "viewing", "name": "Sân Trong An-madang & Hành Lang Hoerang", "role": "Sạp gỗ Pyong-sang đệm lụa & hành lang có mái bao quanh", "point": [-6, 15], "public": true},
+        {"id": "reception", "name": "Lầu Tiếp Đón Pyebaek-sil", "role": "Bàn nghi thức chúc phúc gia đình với tháp táo đỏ & hạt dẻ", "point": [26, -31], "public": true},
+        {"id": "photo", "name": "Lầu Numaru & Vườn Mẫu Đơn Bậc Thang Hwagye", "role": "Hiên vọng cảnh nhìn ra vườn đá bậc thang trồng hoa mẫu đơn", "point": [-26, -31], "public": true}
+      ],
+      "attire": ["Hwarot-inspired crimson", "Wonsam-inspired jade", "Samogwandae-inspired navy"],
+      "activity": "Offer a symbolic family blessing",
+      "program": [
+        {"id": "gathering", "title": "Gathering in the hanok court", "duration": 45, "action": "Greet the gathering", "required": false, "dialogue": "Welcome to a symbolic program drawing on selected Honrye traditions."},
+        {"id": "goose", "title": "Jeonallye-inspired presentation", "duration": 90, "action": "Present the wooden goose", "required": true, "calledRoles": ["mother", "father"], "dialogue": "A carved wooden goose recalls an offering associated with fidelity and harmony."},
+        {"id": "bows", "title": "Gyobaerye bow exchange", "duration": 100, "action": "Exchange a formal bow", "required": true, "dialogue": "Face one another and share a respectful, symbolic bow."},
+        {"id": "cups", "title": "Hapgeullye-inspired cup sharing", "duration": 85, "action": "Lift the shared cup", "required": true, "dialogue": "Paired cups represent two lives coming together. This is a symbolic game action."},
+        {"id": "commitment", "title": "Couple acknowledgment", "duration": 60, "action": "Make my commitment", "required": true, "dialogue": "Choose to acknowledge the promise you make to each other."},
+        {"id": "congratulations", "title": "Blessings & photograph", "duration": 100, "action": "Share a good wish", "required": false, "dialogue": "Celebrate on the veranda. A symbolic family blessing is optional in the reception court."}
+      ]
+    },
+    {
+      "id": "india", "name": "India", "nativeName": "भारत", "symbol": "IN",
+      "center": [163, 0], "rotation": -1.57079632679,
+      "venue": "Marigold garden", "stage": "Floral Mandap · Stage A",
+      "color": "#b77d46", "roof": "#b85265", "floor": "#e4c296", "flower": "#f0b643",
+      "inspiration": "Selected Rajasthan-inspired Hindu wedding references; symbolic vows without sacred chants",
+      "description": "Marigold garlands, a flower-covered mandap, and a joyful garden procession.",
+      "layoutTitle": "Bố cục Cung Điện Charbagh Rajasthan · Mandap Mái Vòm & Sân Nhảy Sangeet",
+      "layoutSummary": "Cổng vòm đá hồng Toran Darwaza → Sân tập kết Baraat & Dinh Haveli mái Chhatri → Trường kỷ Diwan & Đình Mandap 7 bước Saptapadi → Tường Jaali cách âm & Sân nhảy Sangeet.",
+      "photoPoint": [-26, -31],
+      "cinematicViews": [[25, 9, 10, 0, 2.6, -19], [-25, 7.5, -5, 0, 2.8, -21], [27, 11.5, -34, 4, 2.2, -23]],
+      "colliders": [
+        {"bounds": [14.1, 14.7, -28.0, -19.0], "height": 3.8, "material": "jaali"}
+      ],
+      "spatialZones": [
+        {"id": "gate", "name": "Cổng Vòm Đá Hồng Shahi Toran", "role": "Ba tháp vòm Chhatri, rèm hoa vạn thọ & thố đồng Urli", "point": [0, 29], "public": true},
+        {"id": "prep", "name": "Sân Tiền Đường & Dinh Haveli", "role": "Cột cờ nghi lễ & hai dinh chuẩn bị mái vòm Chhatri", "point": [0, 24], "public": true},
+        {"id": "viewing", "name": "Lối Rước Trụ Đèn Đồng & Trường Kỷ Diwan", "role": "Trụ đèn Deepstambh, ghế gối tròn Masnad & hàng rào hoa", "point": [-6, 15], "public": true},
+        {"id": "reception", "name": "Sân Khấu Vũ Điệu Sangeet (Tách Âm)", "role": "Ngăn cách bởi tường hoa gió Jaali, sân nhảy tròn & trống Dhol", "point": [26, -31], "public": true},
+        {"id": "photo", "name": "Hồ Phản Chiếu Hauz & Vòm Ảnh Jharokha", "role": "Hồ nước cung điện, tượng voi đá & khung vòm hoa Hoàng gia", "point": [-26, -31], "public": true}
+      ],
+      "attire": ["Lehenga-inspired marigold", "Sherwani-inspired ivory", "Lehenga-inspired crimson"],
+      "activity": "Join the reception dance",
+      "program": [
+        {"id": "arrival", "title": "Procession & arrival", "duration": 90, "action": "Join the arrival", "required": false, "dialogue": "Gather in the floral courtyard for a selected Rajasthan-inspired celebration."},
+        {"id": "garlands", "title": "Jaimala garland exchange", "duration": 75, "action": "Offer a floral garland", "required": true, "dialogue": "Exchange a garland as a symbolic gesture of welcome and mutual acceptance."},
+        {"id": "fire", "title": "The symbolic flame", "duration": 90, "action": "Pause beside the light", "required": true, "dialogue": "A decorative light represents the sacred-fire setting. No sacred chants or religious officiation are reproduced."},
+        {"id": "steps", "title": "Saptapadi-inspired seven steps", "duration": 180, "action": "Take our symbolic steps", "required": true, "dialogue": "Seven symbolic steps accompany wishes for care, strength, and a shared future. Local traditions differ."},
+        {"id": "commitment", "title": "A chosen promise", "duration": 75, "action": "Make my commitment", "required": true, "dialogue": "Each participant freely affirms a promise. Participation in this game is always voluntary."},
+        {"id": "congratulations", "title": "Blessings & photograph", "duration": 90, "action": "Offer congratulations", "required": false, "dialogue": "Gather for the photograph, then celebrate in the separate dance courtyard."}
+      ]
+    },
+    {
+      "id": "italy", "name": "Italy", "nativeName": "Italia", "symbol": "IT",
+      "center": [0, 168], "rotation": 3.14159265359,
+      "venue": "Olive villa", "stage": "Garden Aisle · Stage A",
+      "color": "#69825c", "roof": "#b57459", "floor": "#e9d9bc", "flower": "#f5e5cb",
+      "inspiration": "An Italian garden celebration with a fictional civil-style ceremony and Sulmona confetti favors",
+      "description": "An olive-lined aisle, a sunlit villa, and a table set for everyone.",
+      "layoutTitle": "Bố cục Giardino all'Italiana · Villa Toscana, Vườn Parterre & Bàn Tiệc Pergola",
+      "layoutSummary": "Cổng sắt Travertine & Hàng bách → Cánh Villa Limonaia vòm cột → Vườn Parterre cắt tỉa & Lối đi đá trắng → Mặt tiền Villa & Bán nguyệt đài Rotunda → Bàn tiệc dài Pergola, Bánh 3 tầng & Quầy kẹo Confetti Sulmona.",
+      "photoPoint": [-26, -31],
+      "cinematicViews": [[25, 9, 10, 0, 2.8, -20], [-25, 7, -5, 0, 2.6, -22], [26, 12, -35, 3, 2.2, -24]],
+      "spatialZones": [
+        {"id": "gate", "name": "Cổng Travertine & Đại Lộ Cây Bách", "role": "Trụ đá cổ điển, cổng sắt uốn & hàng bách Tuscany", "point": [0, 29], "public": true},
+        {"id": "prep", "name": "Cánh Biệt Thự Limonaia & Loggia", "role": "Hàng hiên 3 vòm La Mã, cửa chớp xanh & chậu chanh đất nung", "point": [0, 24], "public": true},
+        {"id": "viewing", "name": "Vườn Hình Học Parterre & Lối Đá Trắng", "role": "Bồn hoàng dương cắt tỉa, lan can con tiện đá & ghế vườn gắn ô liu", "point": [-6, 15], "public": true},
+        {"id": "reception", "name": "Giàn Nho Pergola, Bàn Tiệc Dài & Quầy Confettata", "role": "Bàn tiệc Imperial, bánh cưới 3 tầng & 5 hũ kẹo hạnh nhân Sulmona", "point": [26, -31], "public": true},
+        {"id": "photo", "name": "Vọng Cảnh Lầu Belvedere Bên Hồ", "role": "Lầu cột đá trắng tròn phủ hoa hồng leo nhìn ra mặt nước", "point": [-26, -31], "public": true}
+      ],
+      "attire": ["Garden suit in sage", "Ivory garden dress", "Linen suit in sand"],
+      "activity": "Collect a sugared-almond favor",
+      "program": [
+        {"id": "entrance", "title": "The garden entrance", "duration": 60, "action": "Join the entrance", "required": false, "dialogue": "Welcome to our fictional civil-style garden ceremony. Take a seat beside the olive trees."},
+        {"id": "introduction", "title": "Words of welcome", "duration": 60, "action": "Acknowledge the welcome", "required": false, "dialogue": "We celebrate your choice to share this moment in the company of friends."},
+        {"id": "vows", "title": "A vow to one another", "duration": 90, "action": "Offer my vow", "required": true, "dialogue": "Choose a symbolic vow of care and companionship."},
+        {"id": "commitment", "title": "The ring exchange", "duration": 60, "action": "Exchange a symbolic ring", "required": true, "dialogue": "A ring represents the commitment you each choose to make."},
+        {"id": "congratulations", "title": "Congratulations & photograph", "duration": 90, "action": "Send congratulations", "required": false, "dialogue": "Join the photograph and reception. Confetti favors here are sugared almonds, traditionally associated with celebrations."}
+      ]
+    }
+  ],
+  "transitions": [
+    {"from": "vietnam", "to": "japan", "name": "Bamboo bridge", "kind": "bamboo"},
+    {"from": "japan", "to": "korea", "name": "Stone garden", "kind": "stone"},
+    {"from": "korea", "to": "india", "name": "Flower walk", "kind": "flowers"},
+    {"from": "india", "to": "italy", "name": "Pergola walk", "kind": "pergola"},
+    {"from": "italy", "to": "vietnam", "name": "Waterside promenade", "kind": "water"}
+  ]
+}

@@ -1,0 +1,15 @@
+.git
+.venv
+.npm-cache
+.runtime
+.env
+node_modules
+dist
+artifacts
+test-results
+__pycache__
+**/__pycache__
+.pytest_cache
+*.log
+docs
+WEDDING_WORLD_V3_MASTER_PROMPT.md

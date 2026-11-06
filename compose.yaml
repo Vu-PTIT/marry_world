@@ -1,0 +1,40 @@
+services:
+  world:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:-http://localhost:8000}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:8000,http://127.0.0.1:8000}
+      COMPLETION_PRIVATE_KEY: ${COMPLETION_PRIVATE_KEY:-}
+      REDIS_URL: redis://redis:6379/0
+      REDIS_PREFIX: wedding-world
+      WORLD_ZONE_WORKERS: ${WORLD_ZONE_WORKERS:-0}
+      MAX_GUESTS: ${MAX_GUESTS:-500}
+    depends_on:
+      redis:
+        condition: service_healthy
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /app/.runtime:uid=10001,gid=10001,mode=0700
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    stop_grace_period: 15s
+
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "256mb", "--maxmemory-policy", "noeviction"]
+    tmpfs:
+      - /data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    security_opt:
+      - no-new-privileges:true
+    # No public Redis port, disk volume, AOF, RDB, or completed-event archive.
